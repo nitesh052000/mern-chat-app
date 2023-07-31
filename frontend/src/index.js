@@ -20,5 +20,3 @@ root.render(
     </BrowserRouter>,
   document.getElementById("root")
 );
-
-// Achchhi baat hai
