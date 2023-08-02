@@ -190,7 +190,7 @@ const SingleChat = ({ fetchagain, setFetchAgain }) => {
               icon={<ArrowBackIcon />}
               onClick={() => setSelectedChat("")}
             />
-            {!SelectedChat.isGroupChat ? (
+            {!SelectedChat.isGroupchat ? (
               <>
                 {getSender(user, SelectedChat.users)}
                 <ProfileModel user={getSenderFull(user, SelectedChat.users)} />

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/server.js"
+    "start": "nodemon backend/server.js",
+    "build": "npm install && npm run build-server",
+    "build-server": "echo 'Building server...' && npm run compile-server",
+    "compile-server": "echo 'Compiling server...'"
   },
   "author": "\"nitesh khandelwal\"",
   "license": "ISC",
