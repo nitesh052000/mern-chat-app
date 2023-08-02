@@ -41,11 +41,11 @@ const PORT = process.env.PORT|| 5000;
 
 const Server = app.listen(5000,console.log(`server started on port 5000 ${PORT}`));
 
-const io = require("socket.io")(Server,{
-    pingTimeout:60000,
-    cors:{
-        origin:"http://localhost:3000",
-    },
+const io = require("socket.io")(Server, {
+  pingTimeout: 60000,
+  cors: {
+    origin: "https://mern-chat-app-5xe0.onrender.com",
+  },
 });
 
 io.on("connection",(socket)=>{
