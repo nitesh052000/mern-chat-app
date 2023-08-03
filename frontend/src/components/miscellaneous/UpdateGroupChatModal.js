@@ -58,13 +58,14 @@ const UpdateGroupChatModal = ({fetchagain, SetFetchAgain,fetchMessages}) => {
         position: "bottom-left",
       });
      }
-  }
+  };
 
   const handleRename = async() =>{
         if(!groupChatName)
         return;
 
         try{
+          setRenameLoading(true);
            const config = {
             headers: {
           Authorization: `Bearer ${user.token}`,
@@ -81,7 +82,8 @@ const UpdateGroupChatModal = ({fetchagain, SetFetchAgain,fetchMessages}) => {
          setSelectedChat(data);
          SetFetchAgain(!fetchagain); 
            setRenameLoading(false);
-        }catch(error){
+        }
+        catch(error){
             toast({
         title: "Error Occured!",
         description: error.response.data.message,
@@ -93,7 +95,7 @@ const UpdateGroupChatModal = ({fetchagain, SetFetchAgain,fetchMessages}) => {
       setRenameLoading(false);
         }
         setGroupChatName("");
-  }
+  };
 
   const handleRemove = async(user1) =>{
          if (SelectedChat.groupAdmin._id !== user._id && user1._id !== user._id) {
@@ -139,7 +141,7 @@ const UpdateGroupChatModal = ({fetchagain, SetFetchAgain,fetchMessages}) => {
       setLoading(false);
     }
     setGroupChatName("");
-  }
+  };
 
   const handleAddUser = async(user1) => {
 
@@ -162,7 +164,7 @@ const UpdateGroupChatModal = ({fetchagain, SetFetchAgain,fetchMessages}) => {
         position: "bottom",
       });
       return;
-    }
+    } 
 
 
            try{

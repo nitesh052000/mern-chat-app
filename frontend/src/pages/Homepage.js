@@ -31,7 +31,7 @@ const Homepage = () => {
   return (
     <Container maxW='xl' centerContent>
         <Box
-        d = 'flex'
+        display ="flex"
         justifyContent="Center"
         p={3}
         bg={"white"}
@@ -46,10 +46,10 @@ const Homepage = () => {
         </Box>
 
         <Box bg="White" w="100%" p={4} borderRadius="lg" borderWidth="lpx">
-   <Tabs variant="soft-rounded">
+   <Tabs variant="soft-rounded" colorScheme="green" >
                <TabList mb="1em">
-             <Tab width="50%">Login</Tab>
-            <Tab width="50%">Sigh Up</Tab>
+             <Tab width="50%" fontSize="1xl" fontWeight="bold">Login</Tab>
+            <Tab width="50%" fontWeight="bold">Sign Up</Tab>
             </TabList>
             <TabPanels>
               <TabPanel> <Login /> </TabPanel>
